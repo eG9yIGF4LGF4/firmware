@@ -5,7 +5,7 @@
 ################################################################################
 
 RUBYFPV_SITE_METHOD = git
-RUBYFPV_SITE = https://github.com/RubyFPV/RubyFPV
+RUBYFPV_SITE = https://github.com/eG9yIGF4LGF4/RubyFPV
 RUBYFPV_VERSION = stable
 
 RUBYFPV_DEPENDENCIES += libpcap iw
