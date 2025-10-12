@@ -19,8 +19,6 @@ jobs:
       fail-fast: false
       matrix:
         platform:
-          # Sigmastar [I6E]
-          - ssc30kd_lite
           - ssc30kq_lite
           - ssc338q_lite
           - ssc30kd_ultimate
