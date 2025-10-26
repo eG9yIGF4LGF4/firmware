@@ -15,6 +15,7 @@ RUBYFPV_MAKE_OPTS = \
 	CXX="$(TARGET_CXX)"
 
 define RUBYFPV_BUILD_CMDS
+	git checkout $(RUBYFPV_VERSION) || exit 0
 	$(MAKE) $(RUBYFPV_MAKE_OPTS) -C $(@D) vehicle RUBY_BUILD_ENV=openipc
 endef
 
