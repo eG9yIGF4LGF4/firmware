@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  SIGMASTAR: ssc30kd ssc30kq ssc338q 
+  SIGMASTAR: ssc30kq ssc338q 
   INGENIC: ''
   ALLWINNER: ''
   TAG_NAME: image
