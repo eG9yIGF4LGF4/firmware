@@ -18,10 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform:
-          - ssc30kq_lite
-          - ssc338q_lite
-          - ssc30kd_ultimate
+        platformm:
           - ssc30kq_ultimate
           - ssc338q_ultimate
 
