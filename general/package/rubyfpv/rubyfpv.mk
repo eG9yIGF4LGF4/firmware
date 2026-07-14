@@ -6,7 +6,13 @@
 
 RUBYFPV_SITE_METHOD = git
 RUBYFPV_SITE = https://github.com/eG9yIGF4LGF4/RubyFPV
+ifdef RUBY_REV_NAME
+RUBYFPV_VERSION = $(RUBY_REV_NAME)
+$(info RUBYFPV: RUBY_REV_NAME is set - using custom revision: $(RUBY_REV_NAME))
+else
 RUBYFPV_VERSION = stable
+$(info RUBYFPV: RUBY_REV_NAME is set - using stable resivion)
+endif
 
 RUBYFPV_DEPENDENCIES += libpcap iw
 
@@ -15,7 +21,6 @@ RUBYFPV_MAKE_OPTS = \
 	CXX="$(TARGET_CXX)"
 
 define RUBYFPV_BUILD_CMDS
-	#git checkout $(RUBYFPV_VERSION) || exit 0
 	$(MAKE) $(RUBYFPV_MAKE_OPTS) -C $(@D) vehicle RUBY_BUILD_ENV=openipc
 endef
 
